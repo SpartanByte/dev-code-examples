@@ -1,4 +1,9 @@
+<!--link_to using font awesome icon -->
+<%= link_to fa_icon('pencil-square-o'), edit_company_path(company) %>
+<!-- favicon example, file in images/ directory -->
+<%= favicon_link_tag 'favicons/favicon.ico' %>
 
+<!-- media -->
 <!-- video tag snippet -->
 <%= video_tag(
     'SomeVideoTitle.mp4',
@@ -8,3 +13,9 @@
     muted: true,
     poster: 'sample_image.jpg'
 )%>
+
+<!-- partials -->
+<!-- simple render partial -->
+<%= render partial: 'shared/some_partial_name' %>
+<!-- render partial and pass in local variable-->
+<%= render partial: 'companies/company_nav', locals: {company: company} %>
