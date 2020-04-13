@@ -1,0 +1,5 @@
+// setting environment variables for heroku through command line
+// then past in each environment variables as it appears in the environment variable file.
+heroku config:set 
+//example
+heroku config:set SOME_SERVICE_KEY=0123456789
