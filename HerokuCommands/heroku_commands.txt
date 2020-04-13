@@ -3,3 +3,25 @@
 heroku config:set 
 //example
 heroku config:set SOME_SERVICE_KEY=0123456789
+//you will have to add the master key to heroku in dashboard enviroment variables, run:
+cat config/master.key
+//then add to dashboard as RAILS_MASTER_KEY then restart the app
+rails restart
+
+
+//list out environment variables
+heroku config
+
+// show last 25 lines
+heroku logs -n 25
+
+// running rails db migrate from heroku command line
+heroku rake db:migrate
+
+// running rails console from heroku
+heroku run rails c
+
+// new heroku app
+heroku create some-app-name
+// then
+git push heroku master
