@@ -1,0 +1,15 @@
+// font family call for custom font
+// for rails you need to pass the following into assets.rb
+// Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
+@font-face {
+    font-family: 'CustomFont', sans-serif;
+    src: font-url('fonts/some-font-reglar.tff');
+}
+
+.parent-element{
+    background: black;
+    
+    .nested-element{
+        backbground: grey;
+    }
+}
