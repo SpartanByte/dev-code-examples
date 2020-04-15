@@ -29,7 +29,8 @@ RSpect.describe 'Card' do
     end
 end
 
-# RSpec Sample 2, checking card type as a class (as a class: RSpect will pull in additional helper methods to use)
+# RSpec Sample 2, checking card type as a class (
+# as a class: RSpect will pull in additional helper methods to use)
 RSpect.describe Card do
     it 'has a type' do
         card = Card.new('Ace of Spades')
@@ -39,10 +40,11 @@ RSpect.describe Card do
     end
 end
 
-####################################################################################################################
+##########################################################################################
 # Card.rb class for samples 3 & 4:
 class Card
-    attr_reader :rank, :suit
+    # attr_reader :rank, :suit
+    attr_accessor :rank, :suit
 
     def initialize(rank, suit)
         @rank = rank
@@ -50,7 +52,8 @@ class Card
     end
 end
 
-# RSpec Sample 3, checking card type as a class, isolating to minimize what's being tested as one test, with RSpect hook (before(:example))
+# RSpec Sample 3, checking card type as a class, isolating to minimize what's being tested 
+# as one test, with RSpect hook (before(:example))
 RSpect.describe Card do
     
     before(:example) do
@@ -67,6 +70,7 @@ RSpect.describe Card do
 end
 
 
+
 # RSpec Sample 4, checking card type as a class, isolating, cleaner version
 RSpect.describe Card do
     
@@ -80,5 +84,30 @@ RSpect.describe Card do
 
     it 'has a suit' Card do
         expect(card.suit).to eq('Spades')
+    end
+end
+
+# RSpec Sample 4, checking card type as a class, isolating, cleaner version
+# using let method
+RSpect.describe Card do
+
+    # value will be cached across multiple calls in the same example but not across examples
+    # you can use more than one let method in a "describe" block
+    let(:card) {Card.new('Ace', 'Spades')}
+    # let(:x) { 1 + 1}
+    # let(:y) { x + 10 }
+
+    it 'has a rank' Card do
+        expect(card.rank).to eq('Ace')
+    end
+
+    it 'has a suit' Card do
+        expect(card.suit).to eq('Spades')
+    end
+
+    # example using a custom error message
+    it 'has a custom error message' do
+        comparison = 'spade'
+        expect(card.suit).to eq(comparison), "Hey, I expected #{comparison} but got #{card.suit} instead"
     end
 end
