@@ -1,5 +1,5 @@
 # RSPEC SNIPPETS (DOES NOT INCLUDE CAPYBARA)
-
+# credit to: https://www.udemy.com/course/testing-ruby-with-rspec
 # Initialize RSpect (should create .rspect and spec/rspec_helper.rb)
 rspect --init
 
