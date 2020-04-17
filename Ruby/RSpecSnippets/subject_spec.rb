@@ -53,3 +53,52 @@ RSpec.describe Hash do
         end
     end
 end
+
+# showing unchanged default value
+RSpec.describe Array do
+    subject(:sally) do
+        ['Sally', 'Smith']
+    end
+
+    it 'should have a length of two' do
+        expect(subject.length).to eq(2)
+        subject.pop
+        expect(subject.length).to eq(1)
+    end
+
+    it 'sally should be unchanged' do
+        expect(sally.length).to eq(2)
+    end
+ end
+
+# another way, using only one line for declaring sally (subject)
+ RSpec.describe Array do
+    subject(:sally) { [3, 5] }
+    
+    it 'caches the object within an example' do
+      expect(subject.length).to eq(2)
+      subject.pop
+      expect(subject.length).to eq(1)
+    end
+  
+    it 'creates a new object for a new example' do
+      expect(sally).to eq([3, 5])
+    end
+  end
+  
+
+# ################## one-liner syntax example ##################
+RSpec.describe 'shorthand syntax' do
+    subject { 5 }
+
+    context 'with classic syntax' do
+        it 'should equal 5' do
+            expect(subject).to eq(5)
+        end
+    end
+
+    # with one-liner syntax, rspec provides its own output text
+    context 'with one-liner syntax' do
+        it { is_expected.to eq(5) }
+    end
+end
