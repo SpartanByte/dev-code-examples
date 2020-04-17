@@ -3,14 +3,14 @@
 # nested describe blocks using 'context' method
 # 'context' is only an alias for 'describe', more readable when nested
 # this will print test output in the terminal indented, better organization
-Example:
+# Example:
 #even? method
     # with even number
     #     should return true
     # with odd number
     #     should return false
 
-Rspect.describe '#even? method' do
+RSpec.describe '#even? method' do
 
     context 'with even number' do
         it 'should return true' do
