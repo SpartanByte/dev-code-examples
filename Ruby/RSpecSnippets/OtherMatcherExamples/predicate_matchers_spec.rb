@@ -1,19 +1,24 @@
 # RSPEC SNIPPETS (DOES NOT INCLUDE CAPYBARA)
 # Credit:: https://www.udemy.com/course/testing-ruby-with-rspec/
 
-RSpect.describe 'comparison matchres' do
+# predicate methods are boolean methods and always follow with a ?
+# other examples of predicate ruby methods are .empty? .odd? .even? .zero? etc
+
+RSpect.describe 'predicate methods and predicate matchers' do
     
-    it 'allows for compirson with built in Ruby operators'
-        expect(10).to be > 5
-        expect(8).to be < 15
-        expect(1).to be <= -1
+    it 'can be tested with Ruby methods' do
+        result = 16 / 2
+        expect(result.even?).to eq(true)
     end
 
-    # if you pass through an actual object rather than a class, rspec will automatically make this the subject
-    # same as writing this inside: subject { 100 }
-    describe 100 do
-        it { is_expected.to be > 90 }
-        it { is_expected.to be >= 100 }
-        it { is_expected.to be < 500 }
+    it 'can be tested with predicate matchers' do
+        expect(16 / 2).to be_even
+        # you can add be_ to any ruby predicate method and ruby will understand that you invoking that method
+        # Lines 10-11 and 15 have the exact same result
+        expect(16 / 2).not_to be_even
+
+        expect(15).to be_odd
+        expect(0).to be_zero
+        expect([]).to be_empty
     end
 end
