@@ -35,8 +35,10 @@ RSpec.describe 'equality matchers' do
             
             # c does have the same identity as e, only has a different name
             expect(c).to equal(e)
+            expect(c).to be(e)
             # d does not have the same identity as e
             expect(d).not_to (e)
+            expect(c).not_to ([1, 2, 3])
         end
     end
 end
