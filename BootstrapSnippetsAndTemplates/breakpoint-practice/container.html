@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=devicse-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="id=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Container Example</title>
+	<style>
+		.white-text{color:white;}
+		.black-text{color: black;}
+		.half-port{height: 50vh; /* viewport height */}
+		.quarter-port{height:25vh;}
+		
+		.green{background-color: green;}
+		.red{background-color: red;}
+		.blue{background-color: blue;}
+		.orange{background-color:orange;}
+		.black-0{background-color:black;}
+		.black-1{background-color:#484848;}
+		.black-2{background-color:#888888;}
+		.black-3{background-color:#A9A9A9;}
+
+	</style>
+</head>
+<body class="my-custom-body">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 blue half-port"></div>
+			<div class="col-6 red half-port"></div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-2 black-0 quarter-port">
+				<p class="white-text font-weight-bold">Column 1</p>
+			</div>
+			<div class="col-2 black-1 quarter-port">
+				<p class="white-text font-weight-bold">Column 2</p>
+			</div>
+			<div class="col-2 black-2 quarter-port">
+				<p class="white-text font-weight-bold">Column 3</p>
+			</div>
+			<div class="col-6 black-3 quarter-port">
+				<p class="white-text font-weight-bold">Column 4</p>
+			</div>
+		</div>
+	</div>
+	<!-- container-fluid goes all the way to the edge-->
+	<!-- when collapsed to mobile, breakpoints remove the padding around container so it is the same as container-fluid (all the way to the edge)-->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-6 blue quarter-port"></div>
+			<div class="col-6 red quarter-port"></div>
+		</div>
+		<div class="row text-center">
+			<div class="col-2 black-0 quarter-port">
+				<p class="white-text font-weight-bold">Column 1</p>
+			</div>
+			<div class="col-2 black-1 quarter-port">
+				<p class="white-text font-weight-bold">Column 2</p>
+			</div>
+			<div class="col-2 black-2 quarter-port">
+				<p class="white-text font-weight-bold">Column 3</p>
+			</div>
+			<div class="col-6 black-3 quarter-port">
+				<p class="white-text font-weight-bold">Column 4</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row red">
+			<div class="col-6 green"></div>
+			<div class="col-6 orange"></div>
+		</div>>
+	</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
