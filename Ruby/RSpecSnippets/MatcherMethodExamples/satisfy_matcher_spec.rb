@@ -15,5 +15,4 @@ RSpec.describe 'satisfy matcher' do
             value == value.reverse
         end
     end
-
 end
