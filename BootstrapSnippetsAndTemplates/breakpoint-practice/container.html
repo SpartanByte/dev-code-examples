@@ -10,7 +10,8 @@
 		.white-text{color:white;}
 		.black-text{color: black;}
 		.half-port{height: 50vh; /* viewport height */}
-		.quarter-port{height:25vh;}
+		.quarter-port{height:40vh;}
+		.footer-port{height:10vh;}
 		
 		.green{background-color: green;}
 		.red{background-color: red;}
@@ -20,6 +21,8 @@
 		.black-1{background-color:#484848;}
 		.black-2{background-color:#888888;}
 		.black-3{background-color:#A9A9A9;}
+
+		.footer-content-container > span{height: 10vh; vertical-align: middle;}
 
 	</style>
 </head>
@@ -33,17 +36,23 @@
 	
 	<div class="container">
 		<div class="row text-center">
-			<div class="col-2 black-0 quarter-port">
-				<p class="white-text font-weight-bold">Column 1</p>
+			<div class="col-lg-6 col-sm-6 col-md-6 black-0 d-block m-auto quarter-port">
+				 <p class="white-text font-weight-bold">Column 1</p>
 			</div>
-			<div class="col-2 black-1 quarter-port">
+			<div class="col-lg-6 col-sm-6 col-md-6 black-1 d-block m-auto quarter-port">
 				<p class="white-text font-weight-bold">Column 2</p>
 			</div>
-			<div class="col-2 black-2 quarter-port">
+			<div class="col-lg-6 col-sm-4 col-md-6 black-2 d-block m-auto quarter-port">
 				<p class="white-text font-weight-bold">Column 3</p>
 			</div>
-			<div class="col-6 black-3 quarter-port">
+			<div class="col-lg-6 col-sm-4 col-md-6 black-3 d-block m-auto quarter-port">
 				<p class="white-text font-weight-bold">Column 4</p>
+			</div>
+			<div class="col-lg-6 col-sm-4 col-md-6 black-1 d-block m-auto quarter-port">
+				<p class="white-text font-weight-bold">Column 5</p>
+			</div>
+			<div class="col-lg-6 col-sm-4 col-md-6 black-0 d-block m-auto quarter-port">
+				<p class="white-text font-weight-bold">Column 6</p>
 			</div>
 		</div>
 	</div>
@@ -70,12 +79,14 @@
 		</div>
 	</div>
 	<div class="container-fluid">
-		<div class="row red">
-			<div class="col-6 green"></div>
-			<div class="col-6 orange"></div>
-		</div>>
+		<div class="row footer-port">
+			<div class="col-lg-12 col-md-12 col-sm-12 green">
+				<div class="footer-content-container text-center font-weight-bold">
+					<span>Here is a bunch of text blah blah blah blah</span>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
