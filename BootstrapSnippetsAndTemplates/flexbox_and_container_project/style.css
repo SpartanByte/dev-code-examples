@@ -3,6 +3,18 @@
     height: 100vh;
 }
 
+.my-container{background-color: #a1a1a1;height: 100vh;}
+.row-height{background:#000; height:200px;}
+
+.orange-background{background: orange;height: 200px;}
+.red-background{background: red;height: 200px;}
+.blue-background{ background: blue;height: 200px;}
+
+.flex-purple{background:#5352ed;}
+.flex-lime{background:#7bed9f;}
+.flex-red{background:#ff4757;}
+
+
 /*xs*/
 @media (max-width: 575px){
     .green{
