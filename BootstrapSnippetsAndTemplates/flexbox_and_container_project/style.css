@@ -21,6 +21,10 @@
         background-color: red;
         height: 100vh;
     }
+    .concert-card{
+        width:100% !important;
+        display:block;
+    }
 }
 
 /*sm*/
@@ -28,6 +32,10 @@
     .green{
         background-color: blue;
         height: 100vh;
+    }
+    .concert-card{
+        width:100% !important;
+        display:block;
     }
 }
 

@@ -5,7 +5,24 @@
 	<meta name="viewport" content="width=devicse-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="id=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .concert-card{
+            background: #616161;
+            color:white;
+        }
+        .upcoming{
+            background: white;
+            color:black;
+            border-bottom: 1px solid black;
+        }
+        .home-container{
+            background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-position: fixed;
+            background-position-x:center;
+            background-position-y: center;
+            background-size:cover;}
+    </style>
     <title>Custom Navbar</title>
 </head>
 <body class="my-custom-body">
@@ -43,7 +60,7 @@
           </ul>
         </div>
     </nav>
-    <div class="container-fluid my-container">
+    <div class="container-fluid home-container pb-2">
         <div class="row"><div class="col-sm-12 spacer"></div></div>
             <div class="row">
                 <div class="col-lg-4 col-md-1"></div>
@@ -74,9 +91,52 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                <div class="col-lg-4 col-md-1"></div>
             </div>
-        <div class="col-lg-4  col-md-1"></div>
-    </div>
+            <div class="row mt-2">
+                <div class="col-sm-6">
+                  <div class="concert-card text-center">
+                    <h1>UPCOMING SHOWS</h1>
+                    <div class="card-body upcoming">
+                        <h5 class="card-title">311</h5>
+                        <p class="card-text">311 - 50 Dates in 50 States Tour</p>
+                        <p class="card-text">July 7th, 2020 at <a href="#">Fargo Brewing Company, Fargo ND</a></p>
+                    </div>
+
+                    <div class="card-body upcoming">
+                        <h5 class="card-title">Rock The Meadow</h5>
+                        <p class="card-text">featuring Beartooth, Saul, Fame on Fire, Stick To Your Guns, more</p>
+                        <p class="card-text">August 15th, 2020 at <a href="#">Bluestem Ampitheater, Moorhead MN</a></p>
+                    </div>
+
+                    <div class="card-body upcoming">
+                        <h5 class="card-title">Some Other Concert</h5>
+                        <p class="card-text">Some Other Concert Tour</p>
+                        <p class="card-text">December 31st, 2022 at <a href="#">WishCovidWasOver Theater</a>, FCoronavirus USA</p>
+                    </div>
+
+                    <div class="card-body upcoming">
+                        <h5 class="card-title">Some Other Concert</h5>
+                        <p class="card-text">Some Other Concert Tour</p>
+                        <p class="card-text">December 31st, 2022 at <a href="#">WishCovidWasOver Theater</a>, FCoronavirus USA</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="concert-card text-center">
+                        <h1>LATEST GALLERIES</h1>
+                        <div class="card-body upcoming">
+                          <h5 class="card-title">311</h5>
+                          <p class="card-text">311 - 50 Dates in 50 States Tour</p>
+                          <p class="card-text">July 7th, 2020 at <a href="#">Fargo Brewing Company, Fargo ND</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     <div class="footer">
         <div class="card text-center footer">
           <div class="card-header">
