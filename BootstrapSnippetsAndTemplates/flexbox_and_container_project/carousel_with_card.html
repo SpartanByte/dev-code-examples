@@ -17,6 +17,7 @@
             border-bottom: 1px solid black;
         }
         .home-container{
+            background-color:black;
             background-image: url('https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
             background-position: fixed;
             background-position-x:center;
@@ -26,40 +27,41 @@
     <title>Custom Navbar</title>
 </head>
 <body class="my-custom-body">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
-                <img src="images/lorem_logo.jpg" width="40" height="40" alt="">
-            </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="images/lorem_logo.jpg" width="40" height="40" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Mistris <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Concert Galleries
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Mistris <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Concert Galleries
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </div>
-              </div>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
         </div>
     </nav>
+    <!-- end of navigation -->
     <div class="container-fluid home-container pb-2">
         <div class="row"><div class="col-sm-12 spacer"></div></div>
             <div class="row">
@@ -120,31 +122,27 @@
                         <p class="card-text">Some Other Concert Tour</p>
                         <p class="card-text">December 31st, 2022 at <a href="#">WishCovidWasOver Theater</a>, FCoronavirus USA</p>
                     </div>
-                  </div>
                 </div>
+            </div>
 
-                <div class="col-sm-6">
-                    <div class="concert-card text-center">
-                        <h1>LATEST GALLERIES</h1>
-                        <div class="card-body upcoming">
-                          <h5 class="card-title">311</h5>
-                          <p class="card-text">311 - 50 Dates in 50 States Tour</p>
-                          <p class="card-text">July 7th, 2020 at <a href="#">Fargo Brewing Company, Fargo ND</a></p>
-                        </div>
+            <div class="col-sm-6">
+                <div class="concert-card text-center">
+                    <h1>LATEST GALLERIES</h1>
+                    <div class="card-body upcoming">
+                        <h5 class="card-title">311</h5>
+                        <p class="card-text">311 - 50 Dates in 50 States Tour</p>
+                        <p class="card-text">July 7th, 2020 at <a href="#">Fargo Brewing Company, Fargo ND</a></p>
                     </div>
                 </div>
             </div>
         </div>
-
-
+    </div>
     <div class="footer">
         <div class="card text-center footer">
-          <div class="card-header">
+          <!-- <div class="card-header">
             Featured
-          </div>
+          </div> -->
           <div class="card-body">
-            <!-- <h5 class="card-title">Special title treatment</h5> -->
-            <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
             <a href="#" class="btn btn-primary rounded-0">Concert Galleries</a>
             <a href="#" class="btn btn-primary rounded-0">About Me</a>
             <a href="#" class="btn btn-primary rounded-0">Another Link</a>
