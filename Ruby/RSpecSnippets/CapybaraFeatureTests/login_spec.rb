@@ -5,6 +5,8 @@ RSpec.feature "Logging in a User" do
     #equivalent of 'it' method in rspec
     scenario "A user creates a new article" do
         visit "/"
+        #sample of verifying link exists
+        expect(page).to have_link(@company.name)
         #Click link to load new article page
         click_link "Sign In"    
         #Capybara fills in the following fields with given values

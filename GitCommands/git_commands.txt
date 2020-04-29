@@ -1,0 +1,14 @@
+// add all
+git add .
+
+//Exclude changes to one particular file
+git checkout some_file_name.rb
+
+//merge
+git merge merge_to_merg_in
+
+//Exclude changes to all files
+git checkout --
+
+//reset working directory
+git reset --hard

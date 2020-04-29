@@ -14,6 +14,30 @@
     poster: 'sample_image.jpg'
 )%>
 
+<!-- -->
+<%= truncate(company.title, length: 500) %>
+
+<!-- flash messages-->
+<% flash.each do |key, message|%>
+    <div class="text-center alert-<% key == 'notice' ? 'success': 'danger'%> "></div>
+    <!-- or -->
+    <div class="text-center alert-info"><%= msg %></div>
+<%end%>
+
+
+<!-- check for validation errors in the view-->
+<% if @company.errors.any? %>
+    <!-- add code here, the following will give you the error text, loop using .each
+        company.errors.full_messages
+    -->
+    <h2><%= pluralize(@company.errors.count, "error") %>
+            prohibited this company from being saved: </h2>
+    
+    <% @company.errors.full_messages.each do |msg| %> 
+        <%= msg %>
+    <%end%>
+<%end%>
+
 <!-- partials -->
 <!-- simple render partial -->
 <%= render partial: 'shared/some_partial_name' %>
