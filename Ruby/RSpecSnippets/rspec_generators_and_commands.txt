@@ -1,0 +1,18 @@
+# In some versions of Rails, rspec and/or capybara may need to be manually installed
+# Gemfile:
+group :development, :test do 
+    gem 'rspec-rails', '3.1.0'
+end
+
+group :test do
+    gem 'capybara', '2.7.1'
+end
+
+# Then
+bundle installed
+
+# Run the rspect install generator (creates spec/ directory and configurations)
+rails generate rspec:install
+
+# Generate a stub for RSpec 
+bundle binstubs rspec-core 
