@@ -1,0 +1,14 @@
+1. add example code to application_cable/connect.rb
+
+2. create warden.rb file
+
+3. Add to application.rb
+config.action_cable.mount_path = '/cable'
+
+4. add to routes.rb
+mount ActionCable.server => '/cable'
+
+5. use generator for channel, creates channel file and cable.js file / some_name.coffee
+rails g channel some_name
+
+# channel file contains subscribed and unsubscribed methods
