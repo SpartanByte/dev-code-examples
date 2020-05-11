@@ -12,3 +12,6 @@ mount ActionCable.server => '/cable'
 rails g channel some_name
 
 # channel file contains subscribed and unsubscribed methods
+
+6. update development.rb to accept connections from all ports
+config.action_cable.disable_request_forgery_protection = true
