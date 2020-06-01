@@ -9,7 +9,7 @@ var app = express();
 app.set('port', (process.env.port || 3000));
 
 //set path to folder with client side files
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'app')));
 
 //BodyParser Middleware
 app.use(bodyParser.json());
