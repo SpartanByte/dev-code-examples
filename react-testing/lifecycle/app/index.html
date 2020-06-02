@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+		var MyComponent = React.createClass({
+			getDefaultProps: function(){
+				console.log('Invoking getDefaultProps method');
+				return{
+					myProp: "Foobar"
+				};
+			},
+
+			getInitialState: function(){
+				console.log('Invoking getInitialState method');
+				return null;
+			},
+			componentWillMount: function(){
+				console.log('Invoking componentWillMount method');
+			},
+			componentDidMount: function(){
+				console.log('Invoking componentDidMount method');
+			},
+			render: function(){
+				console.log('Invoking render method');
+				return(
+					<div>
+						<h1>{this.props.myProp}</h1>
+						<button onClick={this.changeProp}>Change Property</button>
+						<button onClick={this.removeHandler}>Unmount</button>
+					</div>
+				)
+			},
+			componentWillReceiveProps: function(){
+				console.log('Invoking componentWillReceiveProps method');
+			},
+			shouldComponentUpdate: function(){
+				console.log('Invoking shouldComponentUpdate method');
+				return true;
+			},
+			componentWillUpdate: function(){
+				console.log('Invoking componentWillUpdate method');
+			},
+			componentDidUpdate: function(){
+				console.log('Invoking componentDidUpdate method');
+			},
+			componentWillUnmount: function(){
+				console.log('Invoking componentWillUnmount method');
+			},
+			changeProp: function(){
+				this.setProps({myProp: "Bar"})
+			},
+			removeHandler: function(){
+				ReactDOM.unmountComponentAtNode(document.getElementById('container'));
+			}
+		});
+
+		ReactDOM.render(
+			<MyComponent />,
+			document.getElementById('container')
+		);
+    </script>
+  </body>
+</html>
