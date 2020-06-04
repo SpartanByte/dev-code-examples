@@ -1,9 +1,9 @@
 var express = require('express');
-var path = require('path'); // part of express
+var path = require('path');
 var bodyParser = require('body-parser');
 var React = require('react');
 var ReactDOMServer = require('react-dom/server');
-require('bable/register');
+require('@babel/core');
 var exphbs = require('express-handlebars');
 //initialize express
 var app = express();
@@ -16,7 +16,9 @@ app.set('view engine', 'handlebars');
 
 //server route for root
 app.get('/', function(req, res){
-	res.render('home');
+	res.render('home', {
+		markup: markup
+	});
 });
 
 
